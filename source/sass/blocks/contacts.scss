@@ -1,0 +1,22 @@
+.contacts {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.contacts__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 18px;
+  color: $opacity-black;
+  text-align: right;
+}
+
+.contacts__number {
+  margin: 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  color: $opacity-dark;
+  text-align: right;
+}

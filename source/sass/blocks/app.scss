@@ -1,0 +1,91 @@
+.app {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 40px 30px;
+  min-height: 311px;
+  background: linear-gradient(90deg, $light-green 0%, $green 100%);
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 100px;
+    left: -130px;
+    transform: translate(0, 50%);
+    width: 563px;
+    height: 563px;
+    background-image: url("../img/phone.png");
+    z-index: 2;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -450px;
+    left: -160px;
+    transform: translate(0, 50%);
+    width: 437px;
+    height: 437px;
+    background-image: url("../img/round.png");
+  }
+}
+
+.app__title {
+  margin: 0 0 4px 0;
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  color: $basic-white;
+}
+
+.app__subtitle {
+  margin: 0 0 30px 0;
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: $basic-white;
+}
+
+.app__list {
+  @include list-reset;
+}
+
+.app__item {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 40px;
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: $basic-white;
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: 10px;
+    transform: translate(0, 50%);
+    width: 17px;
+    height: 4px;
+    background-image: url("../img/dash.svg");
+  }
+}
+
+.app__text {
+  margin: 10px 0 0;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: $basic-white;
+}

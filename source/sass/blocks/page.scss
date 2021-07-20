@@ -1,0 +1,15 @@
+.page__body {
+  font-family: "Source Sans Pro", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: $font-grey;
+  min-width: 360px;
+  min-height: 100vh;
+  align-content: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+}

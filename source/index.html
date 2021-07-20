@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Проверка и оплата задолженности ФССП РФ">
+  <title>Проверка и оплата задолженности ФССП РФ</title>
+  <link href="css/style.css" rel="stylesheet">
+  <!-- <link href="fonts/CoreSansC-45Regular.woff2" as="font" rel="preload" crossorigin="anonymous"> -->
+</head>
+<header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <div class="header__inner">
+        <a class="header__logo logo">
+          <img class="logo__img" src="img/logo.svg" width="67" height="74"
+            alt="Логотип сайта по оплате задолженностей в виде двуглавого орла, держащим топор и свиток">
+        </a>
+        <h1 class="header__title">Проверка и оплата задолженности ФССП РФ</h1>
+      </div>
+      <div class="header__inner">
+        <div class="header__contacts contacts">
+          <p class="contacts__text">Единый бесплатный многоканальный справочный номер ФССП России:</p>
+          <a class="contacts__link" href="tel:+78002503932">
+            <p class="contacts__number">8 (800) 250 39 32</p>
+          </a>
+        </div>
+        <a class="header__link" href="#">
+          <svg class="header__svg" width="30" height="30">
+            <use xlink:href="img/sprite.svg#privat"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="check">
+    <form class="check__form form">
+      <legend class="check__title">Проверить задолженность у судебных приставов</legend>
+      <ul class="form__list">
+        <li class="form__item">
+          <button class="form__button">Физическое лицо</button>
+        </li>
+        <li class="form__item">
+          <button class="form__button">Юридическое лицо</button>
+        </li>
+        <li class="form__item">
+          <button class="form__button">Номер ИП</button>
+        </li>
+        <li class="form__item">
+          <button class="form__button">Номер ИД</button>
+        </li>
+      </ul>
+      <fieldset>
+        <label class="form__label" for="name"></label>
+        <input class="form__input" type="text" name="name" id="name" placeholder="Иванов Иван Иванович">
+        <label class="form__label" for="date"></label>
+        <input class="form__input" type="date" name="date" id="name" placeholder="09.03.1986">
+        <label class="form__label form__label--select" for="location" aria-label="Выбрать регион"></label>
+        <select class="form__select" id="location" name="location">
+          <option value="all" selected>Все регионы</option>
+          <option value="adygea">Республика Адыгея</option>
+          <option value="altai">Республика Алтай</option>
+          <option value="bashkiria">Республика Башкортостан</option>
+          <option value="burytia">Республика Бурятия</option>
+          <option value="degestan">Республика Дагестан</option>
+          <option value="ingushetia">Республика Ингушетия</option>
+          <option value="balkaria">Кабардино-Балкарская Республика</option>
+          <option value="calmycia">Республика Калмыкия</option>
+        </select>
+        <button class="form__button" type="submit">Проверить задолженности</button>
+      </fieldset>
+    </form>
+  </section>
+  <section class="advantages">
+    <ul class="advantages__list">
+      <li class="advantages__item">
+        <button class="advantages__button"></button>
+        <svg class="advantages__svg" width="63" height="65">
+          <use xlink:href="img/sprite.svg#eagle"></use>
+        </svg>
+        <dl class="advantages__about">
+          <dt class="advantages__title">Официальный источник данных</dt>
+          <dd class="advantages__description">Сведения о задолженностях получаются из официального банка данных
+            исполнительных производств ФССП России
+          </dd>
+        </dl>
+      </li>
+      <li class="advantages__item">
+        <button class="advantages__button"></button>
+        <svg class="advantages__svg" width="72" height="63">
+          <use xlink:href="img/sprite.svg#letter"></use>
+        </svg>
+        <dl class="advantages__about">
+          <dt class="advantages__title">Гарантия погашения</dt>
+          <dd class="advantages__description">Сведения об оплате передаются в ФССП России с использованием шлюзов
+            Федерального казначейства
+          </dd>
+        </dl>
+      </li>
+      <li class="advantages__item">
+        <button class="advantages__button"></button>
+        <svg class="advantages__svg" width="63" height="52">
+          <use xlink:href="img/sprite.svg#savety"></use>
+        </svg>
+        <dl class="advantages__about">
+          <dt class="advantages__title">Безопасные платежи</dt>
+          <dd class="advantages__description">Безопасность платежей и данных банковских карт подтверждается сертификатом
+            PCI DSS
+          </dd>
+        </dl>
+      </li>
+      <li class="advantages__item">
+        <button class="advantages__button"></button>
+        <svg class="advantages__svg" width="63" height="63">
+          <use xlink:href="img/sprite.svg#receipt"></use>
+        </svg>
+        <dl class="advantages__about">
+          <dt class="advantages__title">Квитанция об оплате</dt>
+          <dd class="advantages__description">Квитанция будет отправлена на указанный Вами адрес электронной почты сразу
+            же после оплаты
+          </dd>
+        </dl>
+      </li>
+    </ul>
+  </section>
+  <section class="app">
+    <div class="app__wrapper">
+    <h2 class="visually-hidden">Приложение для оплаты задолженностей</h2>
+    <h3 class="app__title">ФССП России - проверка и оплата</h3>
+    <h4 class="app__subtitle">Приложение</h4>
+    <ul class="app__list">
+      <li class="app__item">Проверка и оплата по базе ФССП</li>
+      <li class="app__item">Квитанция об оплате всегда под рукой</li>
+      <li class="app__item">Ответы на часто задаваемые вопросы</li>
+    </ul>
+  </div>
+  <div class="app__wrapper">
+    <a class="app__link" href="#">
+      <img class="app__qr" src="img/qr.svg" width="200" height="200" alt="QR-код для проверки наличия задолженности">
+    </a>
+    <p class="app__text">Наведите камеру или сканер QR-кодов</p>
+    </div>
+  </section>
+</main>
+
+<body class="page__body">
+</body>
