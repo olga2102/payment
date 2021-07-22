@@ -1,0 +1,111 @@
+.news {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0 40px;
+  margin-bottom: 40px;
+  background-color: $light-grey;
+}
+
+.news__title {
+  margin: 0 0 20px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: $green;
+  text-align: right;
+}
+
+.news__list {
+  @include list-reset;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 25px;
+}
+
+.news__item {
+  width: 32%;
+
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+}
+
+.news__link {
+  display: block;
+}
+
+.news__img {
+  margin-bottom: 15px;
+  position: relative;
+  background-color: $grey;
+  border-radius: 10px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../img/camera.svg");
+  }
+}
+
+.news__about {
+  margin: 0;
+}
+
+.news__subtitle {
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  color: $font-grey;
+}
+
+.news__description {
+  margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 20px;
+  color: $font-grey;
+}
+
+.news__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.news__button {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    @include button-reset;
+    display: block;
+    position: relative;
+    margin-right: 8px;
+    width: 5px;
+    height: 5px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 5px;
+      height: 5px;
+      background-color: $opacity-green;
+      border-radius: 50%;
+      top: 50%;
+      right: 50%;
+      cursor: pointer;
+    }
+
+    &--current::before {
+      background-color: $green;
+    }
+  }
+}

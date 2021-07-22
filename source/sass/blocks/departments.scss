@@ -1,0 +1,40 @@
+.departments {
+  padding: 20px 13px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+
+  @media (max-width: $mobile-width) {
+    box-shadow: none;
+    width: 100%;
+  }
+}
+
+.departments__list {
+  @include list-reset;
+  margin-bottom: 10px;
+}
+
+.departments__title {
+  margin: 0 0 20px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.departments__link {
+  font-weight: 600;
+  font-size: 14.5px;
+  line-height: 190.68%;
+  color: $font-grey;
+
+  @media (max-width: $mobile-width) {
+    font-size: 16px;
+  }
+}
+
+.departments__catalog-link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: $green;
+}

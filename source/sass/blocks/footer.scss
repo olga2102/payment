@@ -1,0 +1,132 @@
+.footer {
+  background-color: $light-grey;
+  padding: 32px 0;
+}
+
+.footer__subtitle {
+  margin: 0 0 10px;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 25px;
+  color: $opacity-dark;
+
+  @media (max-width: $mobile-width) {
+    font-size: 20px;
+  }
+}
+
+.footer__list {
+  @include list-reset;
+}
+
+.footer__item {
+  margin-bottom: 5px;
+
+  &--localy,
+  &--service,
+  &--politics {
+    display: none;
+
+    @media (max-width: $mobile-width) {
+      display: block;
+    }
+  }
+
+  &--question {
+    @media (max-width: $mobile-width) {
+      display: none;
+    }
+  }
+}
+
+.footer__link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 149.8%;
+  color: $opacity-dark;
+}
+
+.footer__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 138.27%;
+  color: $opacity-dark;
+
+  @media (max-width: $mobile-width) {
+    font-size: 16px;
+  }
+
+  &--address {
+    margin-bottom: 10px;
+  }
+
+  &--link,
+  &--info {
+    @media (max-width: $mobile-width) {
+      font-size: 14px;
+    }
+  }
+
+  &--note {
+    @media (max-width: $mobile-width) {
+      font-size: 14px;
+      line-height: 18px;
+      color: rgb(147, 147, 147);
+    }
+  }
+}
+
+.footer__mail {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  color: $green;
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+  }
+}
+
+.footer__wrapper {
+  margin-bottom: 34px;
+  max-width: 290px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 10px;
+    padding-right: 28px;
+    max-width: 100%;
+  }
+
+  &:not(:last-child) {
+    margin-right: 40px;
+
+    @media (max-width: $mobile-width) {
+      margin-right: 0;
+    }
+  }
+
+  &--info {
+    padding-top: 35px;
+
+    @media (max-width: $mobile-width) {
+      padding-top: 0;
+    }
+  }
+
+  &--note {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.footer__break {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
