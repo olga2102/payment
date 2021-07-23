@@ -22,3 +22,18 @@
     flex-direction: column;
   }
 }
+
+.page__wrap {
+  display: grid;
+  grid-template-columns: 72.5% 25.5%;
+  grid-template-rows: 50% 1fr;
+  margin-bottom: 40px;
+  gap: 20px;
+  padding: 0 30px;
+
+  @media (max-width: $mobile-width) {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+}

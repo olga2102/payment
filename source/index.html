@@ -36,29 +36,32 @@
   </div>
 </header>
 <main>
+  <div class="page__wrap">
   <section class="check">
-    <form class="check__form form">
       <legend class="check__title">Проверить задолженность у судебных приставов</legend>
-      <ul class="form__list">
-        <li class="form__item">
-          <button class="form__button">Физическое лицо</button>
+      <div class="check__inner">
+      <ul class="check__list">
+        <li class="check__item check__item--current">
+          <a class="check__link check__link--current" href="#">Физическое лицо</a>
         </li>
-        <li class="form__item">
-          <button class="form__button">Юридическое лицо</button>
+        <li class="check__item">
+          <a class="check__link" href="#">Юридическое лицо</a>
         </li>
-        <li class="form__item">
-          <button class="form__button">Номер ИП</button>
+        <li class="check__item">
+          <a class="check__link" href="#">Номер ИП</a>
         </li>
-        <li class="form__item">
-          <button class="form__button">Номер ИД</button>
+        <li class="check__item">
+          <a class="check__link" href="#">Номер ИД</a>
         </li>
       </ul>
-      <fieldset>
-        <label class="form__label" for="name"></label>
+      <form class="check__form form">
+        <label class="form__label" for="name">
         <input class="form__input" type="text" name="name" id="name" placeholder="Иванов Иван Иванович">
-        <label class="form__label" for="date"></label>
-        <input class="form__input" type="date" name="date" id="name" placeholder="09.03.1986">
-        <label class="form__label form__label--select" for="location" aria-label="Выбрать регион"></label>
+      </label>
+        <label class="form__label form__label--date" for="date">
+        <input class="form__input" type="text" name="date" id="name" placeholder="09.03.1986">
+      </label>
+        <label class="form__label form__label--select" for="location" aria-label="Выбрать регион">
         <select class="form__select" id="location" name="location">
           <option value="all" selected>Все регионы</option>
           <option value="adygea">Республика Адыгея</option>
@@ -70,9 +73,10 @@
           <option value="balkaria">Кабардино-Балкарская Республика</option>
           <option value="calmycia">Республика Калмыкия</option>
         </select>
+      </label>
         <button class="form__button" type="submit">Проверить задолженности</button>
-      </fieldset>
     </form>
+  </div>
   </section>
   <section class="advantages">
     <ul class="advantages__list">
@@ -137,13 +141,22 @@
         <li class="app__item">Ответы на часто задаваемые вопросы</li>
       </ul>
     </div>
-    <div class="app__wrapper">
+    <div class="app__wrapper app__wrapper--qr">
       <a class="app__link" href="#">
         <img class="app__qr" src="img/qr.svg" width="200" height="200" alt="QR-код для проверки наличия задолженности">
       </a>
       <p class="app__text">Наведите камеру или сканер QR-кодов</p>
     </div>
+    <div class="app__wrapper app__wrapper--app">
+      <a class="app__link-app app__link-app--store" href="#">
+        <img class="app__img" src="img/app-store-badge.svg" width="112" height="32">
+      </a>
+      <a class="app__link-app app__link-app--google" href="#">
+        <img class="app__img" src="img/google-play-badge.png" width="126" height="49">
+      </a>
+    </div>
   </section>
+</div>
   <section class="news">
     <div class="container">
       <h2 class="news__title">Все новости</h2>

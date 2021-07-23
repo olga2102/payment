@@ -1,3 +1,14 @@
+.advantages {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.advantages__about {
+  margin: 0;
+}
+
 .advantages__list {
   @include list-reset;
 }
@@ -6,15 +17,26 @@
   display: flex;
   position: relative;
   padding: 12px 15px;
+  min-height: 152px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+
+  @media (max-width: $mobile-width) {
+    min-height: 100px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 
 .advantages__svg {
+  flex-shrink: 0;
   margin-right: 10px;
 }
 
 .advantages__title {
+  margin: 0 0 10px;
   font-weight: bold;
   font-size: 18px;
   line-height: 23px;

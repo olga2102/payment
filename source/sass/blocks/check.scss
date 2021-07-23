@@ -1,0 +1,45 @@
+.check__title {
+  margin: 0 0 30px;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 35px;
+
+  @media (max-width: $mobile-width) {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+
+.check__inner {
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  padding: 0 0 35px;
+}
+
+.check__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.check__item {
+  padding: 10px 0;
+  width: 25%;
+  text-align: center;
+  background-color: $light-grey;
+
+  &--current {
+    background-color: $basic-white;
+  }
+}
+
+.check__link {
+  font-size: 20px;
+  line-height: 150%;
+  color: $link-black;
+
+  &--current {
+    color: $current-font;
+  }
+}
