@@ -1,13 +1,34 @@
 .form {
-  display: grid;
+  position: absolute;
+  display: none;
   grid-template-columns: 56.7% 37.5%;
   grid-template-rows: 1fr 1fr;
   gap: 20px;
   padding: 0 20px;
+  top: 90px;
+  left: 0;
+  width: 100%;
+
+  &--current {
+    display: grid;
+  }
 
   @media (max-width: $mobile-width) {
-    display: flex;
+    position: initial;
+    display: none;
     flex-direction: column;
+    gap: 10px;
+    padding-top: 13px;
+    padding-bottom: 25px;
+
+    &--current {
+      display: flex;
+      padding-top: 25px;
+    }
+
+    &--individual {
+      padding-top: 15px;
+    }
   }
 }
 
@@ -17,6 +38,11 @@
   height: 100%;
   border: 1.5px solid $border-grey;
   border-radius: 8px;
+
+  @media (max-width: $mobile-width) {
+    padding: 16px 24px;
+    background: rgba(3, 160, 108, 0.07);
+  }
 }
 
 .form__input::placeholder {
@@ -25,6 +51,11 @@
   font-size: 20px;
   line-height: 25px;
   color: $placeholder-font;
+
+  @media (max-width: $mobile-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .form__label {
@@ -59,6 +90,12 @@
       background-image: url("../img/calendar.svg");
       transform: translateY(-50%);
       cursor: pointer;
+
+      @media (max-width: $mobile-width) {
+        width: 20px;
+        height: 20px;
+        background-size: cover;
+      }
     }
   }
 }
@@ -73,15 +110,31 @@
   border: 1.5px solid $border-grey;
   border-radius: 8px;
   appearance: none;
+
+  @media (max-width: $mobile-width) {
+    padding: 13px 24px;
+    font-size: 16px;
+    line-height: 20px;
+    background: rgba(3, 160, 108, 0.07);
+  }
 }
 
 .form__button {
   @include button-reset;
-  padding: 18px 24px;
+  padding: 8px 20px;
+  min-height: 64px;
   font-weight: 600;
   font-size: 19px;
   line-height: 24px;
   color: $green;
   border: 1px solid $green;
   border-radius: 10px;
+
+  @media (max-width: $mobile-width) {
+    padding: 7px 24px;
+    margin-top: 10px;
+    min-height: 50px;
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

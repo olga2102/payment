@@ -1,3 +1,9 @@
+.check {
+  @media (max-width: $mobile-width) {
+    margin: 0 20px;
+  }
+}
+
 .check__title {
   margin: 0 0 30px;
   font-weight: 900;
@@ -5,41 +11,123 @@
   line-height: 35px;
 
   @media (max-width: $mobile-width) {
+    margin: 0 0 15px;
     font-size: 18px;
     line-height: 23px;
   }
 }
 
 .check__inner {
+  min-height: 268px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
   padding: 0 0 35px;
+
+  @media (max-width: $mobile-width) {
+    box-shadow: none;
+    padding: 0;
+  }
 }
 
 .check__list {
   @include list-reset;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 30px;
   width: 100%;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
 }
 
 .check__item {
-  padding: 10px 0;
   width: 25%;
   text-align: center;
-  background-color: $light-grey;
 
-  &--current {
+  @media (max-width: $mobile-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    min-height: 80px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
     background-color: $basic-white;
   }
 }
 
 .check__link {
+  display: block;
+  padding: 10px 0;
+  width: 100%;
+  height: 100%;
   font-size: 20px;
   line-height: 150%;
   color: $link-black;
+  text-align: center;
+  background-color: $light-grey;
 
   &--current {
-    color: $current-font;
+    background-color: $basic-white;
+
+    @media (max-width: $mobile-width) {
+      padding-left: 75px;
+      color: $current-font;
+      text-align: left;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    position: relative;
+    display: block;
+    padding: 0 0 0 90px;
+    font-size: 16px;
+    text-align: left;
+    line-height: 150%;
+    background-color: $basic-white;
+
+    &--individual {
+      padding-left: 45px;
+      margin-top: 10px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 20px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &--individual::before {
+      width: 20px;
+      height: 20px;
+      background-image: url("../img/individual.svg");
+    }
+
+    &--legal::before {
+      transform: translateY(-50%);
+      top: 15px;
+      width: 45px;
+      height: 45px;
+      background-image: url("../img/legal.svg");
+    }
+
+    &--business::before {
+      width: 40px;
+      height: 40px;
+      background-image: url("../img/business.svg");
+    }
+
+    &--id::before {
+      width: 40px;
+      height: 40px;
+      background-image: url("../img/id.svg");
+    }
   }
 }

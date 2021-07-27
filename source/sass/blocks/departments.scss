@@ -1,9 +1,11 @@
 .departments {
-  padding: 20px 13px;
+  padding: 15px 0 13px 20px;
+  width: 32%;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 
   @media (max-width: $mobile-width) {
+    padding: 20px 0;
     box-shadow: none;
     width: 100%;
   }
@@ -11,14 +13,22 @@
 
 .departments__list {
   @include list-reset;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .departments__title {
-  margin: 0 0 20px;
+  margin: 0 0 13px;
   font-weight: bold;
   font-size: 20px;
   line-height: 25px;
+
+  @media (max-width: $mobile-width) {
+    margin-right: 51px;
+  }
 }
 
 .departments__link {

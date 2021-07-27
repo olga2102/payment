@@ -3,10 +3,19 @@
   grid-row-end: 3;
   grid-column-start: 2;
   grid-column-end: 3;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 20px;
+  }
 }
 
 .advantages__about {
   margin: 0;
+  padding: 0 0 0 75px;
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
+  }
 }
 
 .advantages__list {
@@ -22,7 +31,10 @@
   border-radius: 10px;
 
   @media (max-width: $mobile-width) {
+    padding: 5px 40px 10px;
+    align-items: center;
     min-height: 100px;
+    border: 2px solid $green;
   }
 
   &:not(:last-child) {
@@ -30,16 +42,79 @@
   }
 }
 
-.advantages__svg {
-  flex-shrink: 0;
-  margin-right: 10px;
-}
-
 .advantages__title {
-  margin: 0 0 10px;
+  margin: 0 0 4px;
   font-weight: bold;
   font-size: 18px;
   line-height: 23px;
+
+  @media (max-width: $mobile-width) {
+    padding: 0 0 0 50px;
+    margin: 10px 0 10px;
+    height: 45px;
+    font-size: 16px;
+    line-height: 20px;
+    color: $green;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 15px;
+    left: 12px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: $mobile-width) {
+      left: 30px;
+    }
+  }
+
+  &--officially::before {
+    width: 63px;
+    height: 65px;
+    background-image: url("../img/eagle.svg");
+
+    @media (max-width: $mobile-width) {
+      width: 43px;
+      height: 46px;
+    }
+  }
+
+  &--warranty::before {
+    left: 0;
+    width: 91px;
+    height: 63px;
+    background-image: url("../img/letter.svg");
+
+    @media (max-width: $mobile-width) {
+      left: 15px;
+      width: 68px;
+      height: 52px;
+    }
+  }
+
+  &--savely::before {
+    width: 64px;
+    height: 52px;
+    background-image: url("../img/savety.svg");
+
+    @media (max-width: $mobile-width) {
+      width: 55px;
+      height: 45px;
+    }
+  }
+
+  &--receipt::before {
+    width: 63px;
+    height: 63px;
+    background-image: url("../img/receipt.svg");
+
+    @media (max-width: $mobile-width) {
+      width: 50px;
+      height: 50px;
+    }
+  }
 }
 
 .advantages__description {
@@ -49,6 +124,10 @@
 
   @media (max-width: $mobile-width) {
     display: none;
+
+    &--current {
+      display: block;
+    }
   }
 }
 

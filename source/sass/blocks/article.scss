@@ -1,11 +1,12 @@
 .article {
-  padding: 20px 25px;
+  padding: 25px 73px 50px 25px;
   margin-right: 20px;
-  width: 73%;
+  width: 66%;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 
   @media (max-width: $mobile-width) {
+    padding: 0 0 25px;
     margin: 0;
     width: 100%;
     box-shadow: none;
@@ -21,11 +22,21 @@
 
 .article__list {
   @include list-reset;
-  margin-bottom: 45px;
+  margin-bottom: 50px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 10px;
+  }
 }
 
 .article__item {
   margin: 0 0 25px;
+
+  @media (max-width: $mobile-width) {
+    &:nth-child(4n) {
+      display: none;
+    }
+  }
 }
 
 .article__subtitle {

@@ -1,9 +1,10 @@
 .header {
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   border-top: 20px solid $green;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
 
   @media (max-width: $mobile-width) {
+    margin-bottom: 22px;
     border-top: 5px solid $green;
   }
 }
@@ -24,12 +25,14 @@
 }
 
 .header__title {
+  margin: 18px 0;
   font-style: normal;
   font-weight: normal;
   font-size: 22px;
   line-height: 28px;
 
   @media (max-width: $mobile-width) {
+    margin: 18px;
     font-size: 16px;
     line-height: 20px;
   }
@@ -39,7 +42,7 @@
   margin-right: 20px;
 
   @media (max-width: $mobile-width) {
-    margin-right: 13px;
+    margin-right: 0;
   }
 }
 

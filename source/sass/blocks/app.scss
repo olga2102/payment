@@ -12,26 +12,6 @@
     min-height: 215px;
   }
 
-  &::before {
-    position: absolute;
-    content: "";
-    bottom: 100px;
-    left: -130px;
-    transform: translate(0, 50%);
-    width: 563px;
-    height: 563px;
-    background-image: url("../img/phone.png");
-    z-index: 2;
-
-    @media (max-width: $mobile-width) {
-      bottom: 0;
-      left: -70px;
-      width: 447px;
-      height: 447px;
-      background-image: url("../img/phone-tablet.png");
-    }
-  }
-
   &::after {
     position: absolute;
     content: "";
@@ -46,6 +26,53 @@
 
 .app__wrapper {
   z-index: 1;
+
+  &--list {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: 55px;
+      left: -50%;
+      transform: translate(-40%, 50%);
+      width: 563px;
+      height: 563px;
+      background-image: url("../img/phone.png");
+      z-index: 0;
+
+      @media (max-width: $mobile-width) {
+        bottom: 0;
+        left: 25%;
+        width: 447px;
+        height: 447px;
+        background-image: url("../img/phone-tablet.png");
+        z-index: 1;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: -110%;
+      right: -80%;
+      transform: translate(0, 50%);
+      width: 305px;
+      height: 362px;
+      background-image: url("../img/mask.png");
+      background-repeat: no-repeat;
+      z-index: 0;
+
+      @media (max-width: $mobile-width) {
+        bottom: 0;
+        top: auto;
+        right: -250px;
+        width: 447px;
+        height: 447px;
+        background-image: url("../img/mask.png");
+      }
+    }
+  }
 
   &--app {
     display: none;
@@ -138,4 +165,12 @@
 
 .app__link-app {
   display: block;
+}
+
+.app__link {
+  display: block;
+}
+
+.app__qr {
+  margin: 0 auto;
 }

@@ -1,0 +1,100 @@
+.swiper {
+  @include button-reset;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border: 0.5px solid $grey;
+  border-radius: 50%;
+  background-color: $basic-white;
+  top: 20%;
+  z-index: 2;
+
+  &--prev {
+    left: -1%;
+  }
+
+  &--next {
+    right: -1%;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-left: 1px solid $dark-grey;
+    border-bottom: 1px solid $dark-grey;
+    top: 50%;
+    right: 50%;
+    cursor: pointer;
+  }
+
+  &--next::before {
+    transform: translate(50%, -50%) rotate(-135deg);
+  }
+
+  &--prev::before {
+    transform: translate(50%, -50%) rotate(45deg);
+  }
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+
+.swiper-button-prev {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border: 0.5px solid $grey;
+  border-radius: 50%;
+  background-color: $basic-white;
+  opacity: 1;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-left: 1px solid $dark-grey;
+    border-bottom: 1px solid $dark-grey;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%) rotate(45deg);
+    cursor: pointer;
+  }
+}
+
+.swiper-wrapper .swiper-slide {
+  width: 31%;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+}
+
+.container .swiper-container {
+  overflow: visible;
+}
+
+.swiper-pag {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.swiper-container .swiper-pagination-bullet {
+  width: 5px;
+  height: 5px;
+  background-color: $opacity-green;
+  opacity: 1;
+}
+
+.swiper-container .swiper-pagination-bullet-active {
+  background-color: $green;
+}
