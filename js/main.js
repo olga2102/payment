@@ -67,6 +67,14 @@ new Swiper(".news__swiper", {
     el: '.swiper-pag',
     clickable: true,
   },
-  slidesPerView: "auto",
+  breakpoints: {
+    360: {
+    slidesPerView: 1,
+    },
+    978: {
+      slidesPerView: 3,
+      }
+  },
   spaceBetween: 40,
+  loop: true,
 });

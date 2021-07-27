@@ -825,12 +825,6 @@ img {
     transform: translate(50%, -50%) rotate(45deg);
     cursor: pointer; }
 
-.swiper-wrapper .swiper-slide {
-  width: 31%; }
-  @media (max-width: 977px) {
-    .swiper-wrapper .swiper-slide {
-      width: 100%; } }
-
 .container .swiper-container {
   overflow: visible; }
 
