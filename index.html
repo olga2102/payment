@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Проверка и оплата задолженности ФССП РФ">
+  <title>Проверка и оплата задолженности ФССП РФ</title>
+  <link href="css/style.css" rel="stylesheet">
+  <link href="fonts/SourceSansPro-Regular.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link href="fonts/SourceSansPro-Bold.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link href="fonts/SourceSansPro-SemiBold.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link href="fonts/Roboto-Regular.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body class="page__body">
+<header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <div class="header__inner">
+        <a class="header__logo logo">
+          <img class="logo__img" src="img/logo.svg" width="67" height="74"
+            alt="Логотип сайта по оплате задолженностей в виде двуглавого орла, держащим топор и свиток">
+        </a>
+        <h1 class="header__title">Проверка и оплата задолженности ФССП РФ</h1>
+      </div>
+      <div class="header__inner">
+        <div class="header__contacts contacts">
+          <p class="contacts__text">Единый бесплатный многоканальный справочный номер ФССП России:</p>
+          <a class="contacts__link" href="tel:+78002503932">
+            <p class="contacts__number">8 (800) 250 39 32</p>
+          </a>
+        </div>
+        <a class="header__link" href="#">
+          <svg class="header__svg" width="30" height="30">
+            <use xlink:href="img/sprite.svg#privat"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="page__wrap">
+    <section class="check">
+      <h2 class="check__title">Проверить задолженность у судебных приставов</h2>
+      <div class="check__inner">
+        <ul class="check__list">
+          <li class="check__item check__item--current check__item--individual">
+            <a class="check__link check__link--current check__link--individual" href="#"
+              data-type="individual">Физическое лицо</a>
+            <form class="check__form form form--current form--individual" data-type="individual">
+              <label class="form__label" for="name">
+                <input class="form__input" type="text" name="name" id="name" placeholder="Иванов Иван Иванович">
+              </label>
+              <label class="form__label form__label--date" for="date">
+                <input class="form__input" type="text" name="date" id="date" placeholder="09.03.1986">
+              </label>
+              <label class="form__label form__label--select" for="location" aria-label="Выбрать регион">
+                <select class="form__select" id="location" name="location">
+                  <option value="all" selected>Все регионы</option>
+                  <option value="adygea">Республика Адыгея</option>
+                  <option value="altai">Республика Алтай</option>
+                  <option value="bashkiria">Республика Башкортостан</option>
+                  <option value="burytia">Республика Бурятия</option>
+                  <option value="degestan">Республика Дагестан</option>
+                  <option value="ingushetia">Республика Ингушетия</option>
+                  <option value="balkaria">Кабардино-Балкарская Республика</option>
+                  <option value="calmycia">Республика Калмыкия</option>
+                </select>
+              </label>
+              <button class="form__button" type="submit">Проверить задолженности</button>
+            </form>
+          </li>
+          <li class="check__item check__item--legal">
+            <a class="check__link check__link--legal" href="#" data-type="legal">Юридическое лицо</a>
+            <form class="check__form form" data-type="legal">
+              <label class="form__label" for="organization">
+                <input class="form__input" type="text" name="name" id="organization" placeholder="ООО Финансы">
+              </label>
+              <label class="form__label form__label--date" for="open">
+                <input class="form__input" type="text" name="date" id="open" placeholder="09.03.2010">
+              </label>
+              <button class="form__button" type="submit">Проверить задолженности</button>
+            </form>
+          </li>
+          <li class="check__item check__item--business">
+            <a class="check__link check__link--business" href="#" data-type="business">Номер ИП</a>
+            <form class="check__form form" data-type="business">
+              <label class="form__label form__label" for="number">
+                <input class="form__input" type="text" name="number" id="number" placeholder="99999999999">
+              </label>
+              <button class="form__button" type="submit">Проверить задолженности</button>
+            </form>
+          </li>
+          <li class="check__item check__item--id">
+            <a class="check__link check__link--id" href="#" data-type="id">Номер ИД</a>
+            <form class="check__form form" data-type="id">
+              <label class="form__label form__label" for="id">
+                <input class="form__input" type="text" name="id" id="id" placeholder="8888888888">
+              </label>
+              <button class="form__button" type="submit">Проверить задолженности</button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="advantages">
+      <h2 class="visually-hidden">Преимущества</h2>
+      <ul class="advantages__list">
+        <li class="advantages__item advantages__item--officially">
+          <button class="advantages__button" data-type="officially"></button>
+          <dl class="advantages__about advantages__about--officially">
+            <dt class="advantages__title advantages__title--officially">Официальный источник данных</dt>
+            <dd class="advantages__description" data-type="officially">Сведения о задолженностях получаются из
+              официального банка данных
+              исполнительных производств ФССП России
+            </dd>
+          </dl>
+        </li>
+        <li class="advantages__item advantages__item--warranty">
+          <button class="advantages__button" data-type="warranty"></button>
+          <dl class="advantages__about advantages__about--warranty">
+            <dt class="advantages__title advantages__title--warranty">Гарантия погашения</dt>
+            <dd class="advantages__description" data-type="warranty">Сведения об оплате передаются в ФССП России с
+              использованием шлюзов
+              Федерального казначейства
+            </dd>
+          </dl>
+        </li>
+        <li class="advantages__item advantages__item--savely">
+          <button class="advantages__button" data-type="safely"></button>
+          <dl class="advantages__about advantages__about">
+            <dt class="advantages__title advantages__title--savely">Безопасные платежи</dt>
+            <dd class="advantages__description" data-type="safely">Безопасность платежей и данных банковских карт
+              подтверждается
+              сертификатом PCI DSS
+            </dd>
+          </dl>
+        </li>
+        <li class="advantages__item advantages__item--receipt">
+          <button class="advantages__button" data-type="receipt"></button>
+          <dl class="advantages__about advantages__about">
+            <dt class="advantages__title advantages__title--receipt">Квитанция об оплате</dt>
+            <dd class="advantages__description" data-type="receipt">Квитанция будет отправлена на указанный Вами адрес
+              электронной почты
+              сразу же после оплаты
+            </dd>
+          </dl>
+        </li>
+      </ul>
+    </section>
+    <section class="app">
+      <div class="app__wrapper app__wrapper--list">
+        <h2 class="visually-hidden">Приложение для оплаты задолженностей</h2>
+        <h3 class="app__title">ФССП России - проверка и оплата</h3>
+        <h4 class="app__subtitle">Приложение</h4>
+        <ul class="app__list">
+          <li class="app__item">Проверка и оплата по базе ФССП</li>
+          <li class="app__item">Квитанция об оплате всегда под рукой</li>
+          <li class="app__item">Ответы на часто задаваемые вопросы</li>
+        </ul>
+      </div>
+      <div class="app__wrapper app__wrapper--qr">
+        <a class="app__link" href="#">
+          <img class="app__qr" src="img/qr.svg" width="200" height="200"
+            alt="QR-код для проверки наличия задолженности">
+        </a>
+        <p class="app__text">Наведите камеру или сканер QR-кодов</p>
+      </div>
+      <div class="app__wrapper app__wrapper--app">
+        <a class="app__link-app app__link-app--store" href="#">
+          <img class="app__img" src="img/app-store-badge.svg" width="112" height="32" alt="Лого App-store">
+        </a>
+        <a class="app__link-app app__link-app--google" href="#">
+          <img class="app__img" src="img/google-play-badge.png" width="126" height="49" alt="Лого Google-play">
+        </a>
+      </div>
+    </section>
+  </div>
+  <section class="news">
+    <div class="container">
+      <h2 class="news__title">Все новости</h2>
+      <div class="news__swiper swiper-container">
+        <div class="swiper-wrapper">
+          <div class="news__item swiper-slide">
+            <a class="news__link" href="#">
+              <picture>
+                <source media="(max-width: 977px)" type="image/webp" srcset="img/housing.webp 1x, img/housing@2x.webp 2x">
+                <source media="(max-width: 977px)" srcset="img/housing.png 1x, img/housing@2x.png 2x">
+                <img class="news__img" src="img/housingy.jpg" srcset="img/housingy@2x.jpg 2x" width="353" height="150"
+                  alt="Фото домов">
+              </picture>
+              <dl class="news__about">
+                <dt class="news__subtitle">Жилье россиян в пандемию стали реже принудительно продавать за долги</dt>
+                <dd class="news__description">В 2020 году судебные приставы в интересах кредиторов выставили на торги на
+                  14,1% меньше квартир, чем годом ранее.
+                </dd>
+              </dl>
+            </a>
+          </div>
+          <div class="news__item swiper-slide">
+            <a class="news__link" href="#">
+              <img class="news__img" src="img/housingh.jpg" width="360" height="150" alt="Фото людей в аэропорту, стоящих перед таможней">
+              <dl class="news__about">
+                <dt class="news__subtitle">Число невыездных из-за долгов россиян выросло на 20% за год</dt>
+                <dd class="news__description">Более 4 млн россиян не могут покинуть страну из-за долгов. За год таких
+                  граждан стало больше примерно на 700 тыс.
+                </dd>
+              </dl>
+            </a>
+          </div>
+          <div class="news__item swiper-slide">
+            <a class="news__link" href="#">
+              <img class="news__img" src="img/housingh.jpg" width="360" height="150" alt="Фото компании Филиппа Киркорова">
+              <dl class="news__about">
+                <dt class="news__subtitle">Компания Филиппа Киркорова задолжала налоговой ₽95 тыс.</dt>
+                <dd class="news__description">ООО «Филипп Киркоров Продакшн» задолжало Федеральной налоговой службе 95
+                  тыс. 605 руб.
+                </dd>
+              </dl>
+            </a>
+          </div>
+          <div class="news__item swiper-slide">
+            <a class="news__link" href="#">
+              <picture>
+                <source media="(max-width: 977px)" srcset="img/housing.jpg 1x, img/housing@2x.jpg 2x">
+                <img class="news__img" src="img/housingy.jpg" srcset="img/housingy@2x.jpg 2x" width="353" height="150"
+                  alt="Фото домов">
+              </picture>
+              <dl class="news__about">
+                <dt class="news__subtitle">Жилье россиян в пандемию стали реже принудительно продавать за долги</dt>
+                <dd class="news__description">В 2020 году судебные приставы в интересах кредиторов выставили на торги на
+                  14,1% меньше квартир, чем годом ранее.
+                </dd>
+              </dl>
+            </a>
+          </div>
+        </div>
+        <div class="swiper-pag"></div>
+        <div class="swiper swiper--prev"></div>
+        <div class="swiper swiper--next"></div>
+      </div>
+    </div>
+  </section>
+  <div class="page__wrapper container">
+    <section class="article">
+      <h2 class="article__title">Статьи о работе ФССП</h2>
+      <ul class="article__list">
+        <li class="article__item">
+          <a class="article__link" href="#">
+            <h3 class="article__subtitle">Как приставы списывают деньги с карты</h3>
+            <p class="article__text">Описание процедуры списания денег приставами, ответы на часто задаваемые по этому
+              поводу вопросы.
+            </p>
+          </a>
+        </li>
+        <li class="article__item">
+          <a class="article__link" href="#">
+            <h3 class="article__subtitle">Как приставы списывают деньги с карты. И как их потом возвращать</h3>
+            <p class="article__text">Описание процедуры списания денег приставами, ответы на часто задаваемые по этому
+              поводу вопросы. Ответы на
+              часто задаваемые по этому поводу вопросы. Ответы на часто задаваемые по этому поводу вопросы.
+            </p>
+          </a>
+        </li>
+        <li class="article__item">
+          <a class="article__link" href="#">
+            <h3 class="article__subtitle">Как приставы списывают деньги с карты</h3>
+            <p class="article__text">Описание процедуры списания денег приставами, ответы на часто задаваемые по этому
+              поводу вопросы.
+            </p>
+          </a>
+        </li>
+        <li class="article__item">
+          <a class="article__link" href="#">
+            <h3 class="article__subtitle">Как приставы списывают деньги с карты</h3>
+            <p class="article__text">Описание процедуры списания денег приставами, ответы на часто задаваемые по этому
+              поводу вопросы. Ответы на
+              часто задаваемые по этому поводу вопросы. Ответы на часто задаваемые по этому поводу вопросы.
+            </p>
+          </a>
+        </li>
+      </ul>
+      <a class="article__catalog-link" href="#">Все статьи</a>
+    </section>
+    <section class="departments">
+      <h2 class="departments__title">Территориальные<br>отделения ФССП России</h2>
+      <ul class="departments__list">
+        <li class="departments__item">
+          <a class="departments__link" href="#">Москва</a>
+        </li>
+        <li class="departments__item">
+          <a class="departments__link" href="#">Московская область
+          </a>
+        </li>
+        <li class="departments__item">
+          <a class="departments__link" href="#">Санкт-петербург
+          </a>
+        </li>
+        <li class="departments__item">
+          <a class="departments__link" href="#">Краснодар</a>
+        </li>
+        <li class="departments__item">
+          <a class="departments__link" href="#">Екатеринбург</a>
+        </li>
+        <li class="departments__item">
+          <a class="departments__link" href="#">Челябинск</a>
+        </li>
+        <li class="departments__item">
+          <a class="departments__link" href="#">Казань</a>
+        </li>
+        <li class="departments__item">
+          <a class="departments__link" href="#">Красноярск</a>
+        </li>
+        <li class="departments__item">
+          <a class="departments__link" href="#">Республика Дагестан</a>
+        </li>
+        <li class="departments__item">
+          <a class="departments__link" href="#">Республика Башкортостан</a>
+        </li>
+        <li class="departments__item">
+          <a class="departments__link" href="#">Ростов-на-Дону</a>
+        </li>
+        <li class="departments__item">
+          <a class="departments__link" href="#">Самара
+          </a>
+        </li>
+        <li class="departments__item">
+          <a class="departments__link" href="#">Нижний Новгород</a>
+        </li>
+        <li class="departments__item">
+          <a class="departments__link" href="#">Новосибирск</a>
+        </li>
+        <li class="departments__item">
+          <a class="departments__link" href="#">Пермский край</a>
+        </li>
+      </ul>
+      <a class="departments__catalog-link" href="#">Все территориальные отделения</a>
+    </section>
+  </div>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__wrapper">
+        <nav class="footer__nav">
+          <h3 class="footer__subtitle">Основные разделы</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Проверка и оплата задолженностей <br class="footer__break">ФССП</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Статьи о работе ФССП</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Новости</a>
+            </li>
+            <li class="footer__item footer__item--localy">
+              <a class="footer__link footer__link--localy" href="#">Территориальные отделения ФССП России</a>
+            </li>
+            <li class="footer__item footer__item--service">
+              <a class="footer__link footer__link--service" href="#">О сервисе</a>
+            </li>
+            <li class="footer__item footer__item--politics">
+              <a class="footer__link footer__link--politics" href="#">Политика</a>
+            </li>
+            <li class="footer__item footer__item--question">
+              <a class="footer__link" href="#">Часто задаваемые вопросы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__wrapper">
+        <h3 class="footer__subtitle">Оператор сервиса</h3>
+        <p class="footer__text">ООО ”Простые платежи”</p>
+        <p class="footer__text">ИНН: 1660269024</p>
+        <p class="footer__text">ОГРН: 1161690087547</p>
+      </div>
+      <div class="footer__wrapper">
+        <h3 class="footer__subtitle">Контакты и поддержка</h3>
+        <p class="footer__text footer__text--address">г. Казань, ул. Толбухина 11-54</p>
+        <p class="footer__text footer__text--link">В случае возникновения вопросов обращайтесь в службу поддержки
+          клиентов по адресу:
+          <a class="footer__mail" href="mailto:support@oplata-fssp.ru">support@oplata-fssp.ru</a>
+        </p>
+      </div>
+      <div class="footer__wrapper footer__wrapper--info">
+        <h3 class="visually-hidden">Важная информация</h3>
+        <p class="footer__text footer__text--info">При обращении по вопросам прохождения оплаты и погашения
+          задолженности по ИП укажите,
+          пожалуйста, номер транзакции, который был отправлен в письме о подтверждении успешной оплаты.</p>
+      </div>
+    </div>
+    <div class="footer__wrapper footer__wrapper--note">
+      <p class="footer__text footer__text--note">Сервис oplata-fssp.ru создан для удобной онлайн проверки и оплаты
+        задолженностей по
+        исполнительным производствам Федеральной службы судебных приставов России (ФССП).</p>
+      <p class="footer__text footer__text--note">Сервис осуществляет свою деятельность в рамках соглашения с Федеральной
+        службой судебных
+        приставов №0011/14 от 11
+        мая 2017.</p>
+      <p class="footer__text footer__text--note">Операторами по переводу денежных средств являются НКО “Монета.ру”
+        (лицензия ЦБ РФ №3508-К
+        от 02 июля 2012) и ПАО
+        “Промсвязьбанк” (лицензия ЦБ РФ №3521 от 17 декабря 2014).</p>
+    </div>
+
+  </div>
+</footer>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
+<!-- <script src="js/main-form.js"></script>
+<script src="js/main-slider.js"></script>
+<script src="js/main-advantages.js"></script> -->
+</body>
