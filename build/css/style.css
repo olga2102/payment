@@ -772,7 +772,7 @@ img {
   display: flex;
   justify-content: center; }
 
-.swiper {
+.swiper-container .swiper {
   background-color: transparent;
   border: none;
   position: absolute;
@@ -781,13 +781,13 @@ img {
   border: 0.5px solid #dbdbdb;
   border-radius: 50%;
   background-color: white;
-  top: 20%;
+  top: 27%;
   z-index: 2; }
-  .swiper--prev {
-    left: -1%; }
-  .swiper--next {
-    right: -1%; }
-  .swiper::before {
+  .swiper-container .swiper--prev {
+    left: 0%; }
+  .swiper-container .swiper--next {
+    right: 0%; }
+  .swiper-container .swiper::before {
     position: absolute;
     content: "";
     width: 7px;
@@ -797,12 +797,12 @@ img {
     top: 50%;
     right: 50%;
     cursor: pointer; }
-  .swiper--next::before {
+  .swiper-container .swiper--next::before {
     transform: translate(50%, -50%) rotate(-135deg); }
-  .swiper--prev::before {
+  .swiper-container .swiper--prev::before {
     transform: translate(50%, -50%) rotate(45deg); }
   @media (max-width: 977px) {
-    .swiper {
+    .swiper-container .swiper {
       display: none; } }
 
 .swiper-button-prev {

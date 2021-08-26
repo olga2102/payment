@@ -1,4 +1,4 @@
-.swiper {
+.swiper-container .swiper {
   @include button-reset;
   position: absolute;
   width: 35px;
@@ -6,15 +6,15 @@
   border: 0.5px solid $grey;
   border-radius: 50%;
   background-color: $basic-white;
-  top: 20%;
+  top: 27%;
   z-index: 2;
 
   &--prev {
-    left: -1%;
+    left: 0%;
   }
 
   &--next {
-    right: -1%;
+    right: 0%;
   }
 
   &::before {
